@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anna Nails</title>
+  <link rel="stylesheet" href="style.css">
+  <!--boxicons-->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <!--remixicon-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td,
+    th {
+      border: 1px solid #ffe0bd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #ffad60;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- esta seccion es la cabecera de la web la cual tendra logo y nav bar-->
+  <header>
+    <!--LOGO-->
+    <a href="#" class="logo">ANNA NAILS</a>
+
+    <!--TRUCO PARA QUE EL BOTON SEA CLICKEABLE SIN USAR JS-->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon-action">
+      <div class='bx bx-menu' id="menu-icon"></div>
+    </label>
+
+
+    <ul class="menu-horizontal">
+      <li><a href="#">Inicio</a></li>
+      <li>
+        <ul class="menu-vertical">
+          <li><a href="#">Manicuria</a></li>
+          <li><a href="#">Pedicuria</a></li>
+          <li><a href="#">Productos</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Sobre mi</a></li>
+      <li>
+        <ul class="menu-vertical">
+          <li><a href="#">Quien Soy</a></li>
+          <li><a href="#">Mis Comienzos</a></li>
+        </ul>
+      <li><a href="#">Mis Trabajos</a></li>
+      <li>
+        <ul class="menu-vertical">
+          <li><a href="#">Kapping</a></li>
+          <li><a href="#">Semipermanente</a></li>
+          <li><a href="#">Polygel</a></li>
+        </ul>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </header>
+
+  <!--HERO SECTION-->
+
+  <section class="hero">
+    <div class="hero-text">
+      <h5>Manicurista Profesional</h5>
+      <h4>Esteticista</h4>
+      <h1>Anna Nails</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, <br>
+        assumenda sapiente modi est nam reprehenderit facere labore tempora quaerat!
+      </p>
+    </div>
+
+    <div class="hero-img">
+      <img src="/assets/imgs/WhatsApp Image 2024-06-19 at 23.40.36.jpeg" alt="Anna foto">
+    </div>
+  </section>
+
+
+  <div class="icons">
+    <a href="#"><i class="ri-instagram-line"></i></a>
+    <a href="#"><i class="ri-youtube-line"></i></a>
+    <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+
+  </div>
+
+  <div class="scroll-down">
+    <a href="#"><i class="ri-arrow-down-s-fill"></i></a>
+
+  </div>
+
+
+
+
+
+</body>
+
+</html>
+
+
+<!-- <div class="contenedor">
+    <h3>Envio <b>GRATIS</b> a partir de $5.000 de compra</h3>
+    <div class="contacto">
+      <div class="logo">
+        <img src="assets/imgs/whatsapp.png" alt="" width="30px" height="30px">
+      </div>
+      <h3> 3624-136260</h3>
+    </div>
+  </div>
+ 
+  
+
+  <div class="Texto">
+   <h2>ANNA NAIL'S</h2>
+  </div>
+  <nav>
+    <ul class="menu-horizontal">
+
+      <li><a href="#">Inicio</a></li>
+      <li>
+          <a href="#">Manicuria</a>
+          <ul class="menu-vertical">
+            <li><a href="#">Polygel</a></li>
+            <li><a href="#">Esculpidas</a></li>
+            <li><a href="#">Semipermanente</a></li>
+          </ul>
+      </li>
+      <li>
+          <a href="#">Pedicuria</a>
+          <ul class="menu-vertical">
+            <li><a href="#">Kapping</a></li>
+            <li><a href="#">Baby Boomer</a></li>
+            <li><a href="#">Remocion</a></li>
+        </ul>
+      <li>
+          <a href="#">Productos</a>
+          <ul class="menu-vertical">
+            <li><a href="#">Esmaltes Permanentes</a></li>
+            <li><a href="#">Acrygel</a></li>
+            <li><a href="#">Kits</a></li>
+        </ul>
+
+      </li>
+    </ul>
+  </nav>
+  <section>
+    <article>
+      <h2>Manicuria</h2>
+      <p>Descripcion del producto</p>
+    </article>
+  </section>
+  <section>
+    <article>
+      <h2>Pedicuria</h2>
+      <p>Descripcion del producto</p>
+    </article>
+  </section>
+  <section>
+    <article>
+      <h2>Venta de Esmaltes</h2>
+      <p>Descripcion del producto</p>
+    </article>
+  </section>
+  <h3>Solicita tu turno</h3>
+  <form>
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" id="nombre">
+    <label for="apellido">Apellido</label>
+    <input type="text" name="apellido" id="apellido"><br>
+    <br>
+    <label for="manos">Manos</label>
+    <input type="radio" name="servicio" id="manos"><br>
+    <label for="pies">Pies</label>
+    <input type="radio" name="servicio" id="pies"><br>
+    <label for="manos y pies">Manos y Pies</label>
+    <input type="radio" name="servicio" id="manos y pies"> <br>
+    <h4>Servicios</h4>
+    <label for="semipermanente">Semipermanente</label>
+    <input type="checkbox" name="servicios" id="servicios">
+    <label for="kapping">Kapping</label>
+    <input type="checkbox" name="servicios" id="servicios">
+    <label for="soft gel">Soft Gel</label>
+    <input type="checkbox" name="servicios" id="servicios"> <br>
+    <br>
+    <input type="submit" value="Enviar" </form>
+    <footer>
+      <p>Argentina 2024</p>
+      <p>Todos los derechos reservados</p>
+      <nav>
+        <ul>
+          <li><a href="">Terminos y condiciones</a></li>
+          <li><a href="">Mapa del sitio</a></li>
+          <li><a href="">Informacion legal</a></li>
+          <li><a href="">Contacto</a></li>
+        </ul>
+      </nav>
+    </footer>
+</body>
+
+</html>

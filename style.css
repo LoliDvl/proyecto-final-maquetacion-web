@@ -1,0 +1,419 @@
+/*NORMALIZACION*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /*MANTIENE EL ANCHO Y ALTO A PESAR DE PADDING Y BORDER*/
+    font-family: 'inconsolata', monospace;
+    list-style: none;
+    /*QUITA LOS PUNTOS Y DECORACION DE LAS LISTAS*/
+    text-decoration: none;
+    /*ESTO QUITA EL SUBRAYADO DE LOS ENLACES*/
+    color: white;
+}
+
+body {
+    background-color: black;
+    /*BORRAR CUANDO TENGAMOS EL FONDO FINAL*/
+}
+
+header {
+    font-family: sans-serif;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    /*ESTO HACE QUE EL HEADER QUEDE POR ENCIMA*/
+    width: 100%;
+    display: flex;
+    /*ESTO HACE QUE LOS ELEMENTOS SE PONGAN EN LINEA*/
+    align-items: center;
+    /*CENTRA VERTICALMENTE*/
+    justify-content: space-between;
+    /*LOS ELEMENTOS SE SEPAREN*/
+    padding: 15px 3%;
+    background-color: transparent;
+}
+
+.logo {
+    font-size: 50px;
+    font-weight: 800;
+    /*ESTE ES EL GROSOR DE LAS LETRAS*/
+}
+
+
+#menu-icon {
+    display: none;
+    /*ESTO VA EN NONE PARA QUE SOLO SE VEA CUANDO LA PAG ESTE COLAPSADA DE FORMA HORIZONTAL*/
+}
+
+#menu-icon {
+    font-size: 35px;
+    z-index: 101;
+    cursor: pointer;
+    /*PARA QUE APAREZCA LA MANITO*/
+}
+
+#menu-toggle {
+    display: none;
+    /*PARA QUE NUUNCA SE VEA EL CHECKBOX*/
+}
+
+#menu-icon-action {
+    display: none;
+    /*PARA QUE NO SE LE PUEDA HACER CLICK*/
+}
+
+
+
+.navlist {
+    display: flex;
+    /*ESTO SIRVE PARA QUE LOS ELEMENTOSSE PONGAN EN LINEA*/
+}
+
+.menu-horizontal a {
+    margin-left: 60px;
+    /*esto es para separar las palabras*/
+    font-size: 20px;
+    font-weight: 600px;
+    border-bottom: 2px solid transparent;
+    transition: all .5s ease;
+    /*esto es para animar todas las caracteristicas del navlist a*/
+}
+
+.menu-horizontal {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-horizontal>li>a {
+    display: block;
+    padding: 15px 20px;
+    color: rgb(244, 244, 255);
+    text-decoration: none;
+}
+
+.menu-horizontal>li:hover {
+    background-color: rgba(150, 94, 155, 0.664);
+    border-radius: 5px;
+    transition: all .5s ease;
+    border-bottom: 2px solid white
+}
+
+.menu-horizontal li:hover .menu-vertical {
+    display: block;
+}
+
+.menu-vertical {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(69, 93, 95, 0.5);
+}
+
+.menu-vertical li:hover {
+    background-color: rgb(96, 177, 173);
+}
+
+.menu-vertical li a {
+    display: block;
+    color: white;
+    padding: 15px 15px 15px 20px;
+    text-decoration: none;
+}
+
+.hero {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(245.59deg, #46314e 0%, #70385a 0%, #131313 75%);
+    /*ESCALA DE COLOR DEGRADADO*/
+    position: relative;
+    /*PARA QUE SEA RELATIVO AL CONTENEDOR (NOS PERMITE USAR LEFT, BOTTOM, RIGHT)*/
+    display: grid;
+    /*PARA QUE EL HERO SE DIVIDA EN DOS COLUMNAS*/
+    grid-template-columns: 1fr 1fr;
+    /*LAS DOS COLUMNAS*/
+    align-items: center;
+    /*PARA ALINEAR VERTICALMENTE EL HERO*/
+    gap: 2rem;
+    /*PARA QUE HAYA ESPACIO ENTRE LAS DOS COLUMNAS*/
+}
+
+section {
+    padding: 0 8%;
+}
+
+.hero-text h5 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.hero-text h1 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 60px;
+    line-height: 1;
+    margin: 0 0 30px;
+}
+
+.hero-text h4 {
+    font-size: 34px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.hero-text p {
+    font-size: 80%;
+    margin-bottom: 40px;
+    line-height: 1.9;
+}
+
+.hero-img img {
+    width: 400px;
+    border-radius: 80px;
+    margin: 10% 0 0 20%;
+    height: auto;
+    transition: all 3s linear;
+}
+
+.hero-img img:hover {
+    width: 450px;
+    opacity: 0.6;
+}
+
+.icons {
+    position: absolute;
+    top: 50vh;
+    padding: 0 3%;
+    transform: translateY(-50%);
+}
+
+.icons i {
+    display: block;
+    margin: 26px 0;
+    font-size: 35px;
+    transition: all 0.5s ease;
+
+}
+
+.icons i:hover {
+    color: #4d4d4d;
+    transform: translateY(-5px);
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 6%;
+    right: 3%;
+}
+
+.scroll-down i {
+    display: block;
+    padding: 12px;
+    font-size: 25px;
+    background-color: #21383d;
+    border-radius: 30px;
+    transition: all .5s ease;
+}
+
+.scroll-down i:hover {
+    transform: translateY(-5px);
+}
+
+/* Mediaqueries es para que la web sea responsive*/
+@media (max-width:992px) {
+    section {
+        padding: 0 3%;
+        transition: .2s;
+    }
+
+    .hero-text {
+        padding-top: 0;
+    }
+
+    .hero-img {
+        text-align: center;
+    }
+
+
+    .hero-img img {
+        width: 80%;
+        margin: 10% 0 0 10%;
+    }
+
+
+    .hero-text p {
+        font-size: 70%;
+    }
+
+    .scroll-down {
+        display: none;
+    }
+
+
+
+    .icons {
+        display: none;
+    }
+}
+
+@media(max-width: 768px){
+    .menu-icon-action{
+        display: block;
+    }
+    #menu-icon{
+        display: block;
+    }
+    .hero-text{
+        text-align: center;
+        padding-top: 100px;
+    }
+    .hero-img img{
+        margin: 0;
+    }
+    .hero{
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+    .menu-horizontal{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 200px;
+        height: 315px;
+        background-color: #310a35ec;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        transition: all .5s ease-out;
+    }
+
+    .menu-horizontal a{
+        display: block;
+        margin: 7px 0;
+    }
+
+    #menu-toggle:checked + label.menu-icon-action + ul{
+        right: 0;
+    }
+
+}
+
+
+
+
+
+
+
+/*
+.barra {
+    width: 100%;
+    height: 200px;
+}
+
+.contenedor {
+    width: 100%;
+    height: 1px;
+    background-color: #28385c54;
+    padding: 18px;
+    box-sizing: border-box;
+    color: rgba(29, 27, 27, 0.445);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: fixed;
+
+}
+.logo{
+    position: relative;
+    top: 15px;
+    padding-left: right;
+    justify-content: flex-end;
+    filter: invert(99%) sepia(30%) saturate(245%) hue-rotate(256deg) brightness(113%) contrast(96%);
+}
+.contacto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: end;
+}
+
+.Texto {
+    width: 50%;
+    margin-left: 25%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 45px;
+    color: hsla(32, 52%, 71%, 0.404);
+    margin-bottom: 15px;
+    padding-left: 12px;
+    padding-top: 1px;
+    padding-bottom: 30px;
+    
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+}
+nav{
+    max-width: auto;
+    margin: auto;
+    background-color: rgb(102, 154, 189);
+    font-size: 20px;
+    margin-top: 8px;
+}
+body {
+    background-image: url(assets/imgs/img-fondo3.jpg);
+    background-size: cover;
+}
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.menu-horizontal > li > a{
+    display: block;
+    padding: 15px 20px;
+    color: rgb(244, 244, 255);
+    text-decoration: none;
+}
+.menu-horizontal > li:hover{
+    background-color: rgb(102, 132, 139);
+}
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(69, 93, 95, 0.5);
+}
+.menu-horizontal li:hover .menu-vertical{
+    display: block;
+}
+.menu-vertical li:hover{
+    background-color: rgb(96, 177, 173);
+}
+.menu-vertical li a{
+    display: block;
+    color: white;
+    padding: 15px 15px 15px 20px;
+    text-decoration: none;
+}
+section {
+    max-width: 20%;
+    margin-left: 1%;
+    background-color: azure;
+    margin-bottom: 2px;
+    padding-left: 2px;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    border: outset 4px #030303;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+}
